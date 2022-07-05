@@ -135,6 +135,7 @@ body {
 }
 
 #op1,#op2{
+  margin-top: 15px;
   color:orange;
   font-size: larger;
 }

@@ -48,7 +48,7 @@
     var time21 = t21.options[t21.selectedIndex].text;
     var time22 = t22.options[t22.selectedIndex].text;
     var t2=time21+":"+time22
-console.log(time11,time12)
+// console.log(time11,time12)
 //get current time
 dt1= new Date()
 
@@ -61,18 +61,23 @@ dt2.setMinutes(time12)
 
 //New time computed
 newtime=convertMinsToHrsMins(diff_minutes(dt1,dt2))
-console.log(newtime)
+// console.log(newtime)
 
 //Served so far for...
 served=addTimes(t2,newtime)
-console.log(served);
+// console.log(served);
 
 //need to serve more..
 tobeserved=subTimes("8:30",served)
-console.log(tobeserved);
+// console.log(tobeserved);
 
 var op1="Served so far for : "+served+" hours"
 var op2="Need to serve more : "+tobeserved+" hours for 8:30hrs"
+// console.log(dt1.getHours())
+if(dt1.getHours()>=0 && dt1.getHours()<7){
+    op1="Try between 7 AM to 11 PM"
+    op2=""
+  }
 var ele=document.getElementById('op1')
 ele.innerHTML=op1
 var ele2=document.getElementById('op2')
