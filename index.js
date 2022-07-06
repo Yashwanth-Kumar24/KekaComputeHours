@@ -65,7 +65,9 @@
     }, 500);
   }
 
-
+  function refresh(){
+    window.location.reload("Refresh")
+  }
 
   function ready(){
     var t11 = document.getElementById("intimehr");
