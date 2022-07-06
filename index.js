@@ -105,7 +105,11 @@ tobeserved=subTimes("8:30",served)
 var op1="Served so far for : "+served+" hours"
 var op2="Need to serve more : "+tobeserved+" hours for 8:30hrs"
 // console.log(dt1.getHours())
-if(dt1.getHours()>=0 && dt1.getHours()<7){
+
+  ctime=dt1.getHours()+":"+dt1.getMinutes();
+  outtime=addTimes(ctime,tobeserved)
+  var op3="Your out-time is "+outtime+"hrs. (With no BREAKS)"
+  if(dt1.getHours()>=0 && dt1.getHours()<7){
     op1="Try between 7 AM to 11 PM"
     op2=""
     op3=""
@@ -115,9 +119,11 @@ if(dt1.getHours()>=0 && dt1.getHours()<7){
     op2=""
     op3=""
   }
-  ctime=dt1.getHours()+":"+dt1.getMinutes();
-    outtime=addTimes(ctime,tobeserved)
-  var op3="Your out-time is "+outtime+"hrs. (With no BREAKS)"
+  if(served > '08:30'){
+    op1="Served so far for : "+served+" hours"
+    op2=""
+    op3="You can leave!!!"
+  }
   var ele=document.getElementById('op1')
   ele.innerHTML=op1
   var ele2=document.getElementById('op2')
