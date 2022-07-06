@@ -190,3 +190,10 @@ h1{
 .refresh{
   margin-right: 10px;
 }
+
+.dark-mode-btn{
+  background-color: rgb(170, 9, 245);
+}
+.dark-mode {
+  background-color: black;
+}

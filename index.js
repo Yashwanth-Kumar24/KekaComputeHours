@@ -72,7 +72,13 @@
   function openKeka(){
     window.open("https://techigai.keka.com/#/me/attendance/logs", "_blank");
   }
-
+  function darkMode() {
+    var element = document.body;
+    if(element.className=="dark-mode")
+      element.classList.remove('dark-mode');
+    else
+    element.classList.add('dark-mode');
+  }
   function ready(){
     var t11 = document.getElementById("intimehr");
     var t12 = document.getElementById("intimemin");
