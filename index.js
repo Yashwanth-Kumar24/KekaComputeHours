@@ -37,7 +37,12 @@
   function subTimes(t0, t1) {
     return timeFromMins(timeToMins(t0) - timeToMins(t1));
   }
-
+  function load(){
+    dt1= new Date()
+    currentTime = "Current Time : "+dt1.getHours()+":"+dt1.getMinutes()+":"+dt1.getSeconds()
+    var ele3=document.getElementById('ctime')
+    ele3.innerHTML=currentTime
+  }
   function ready(){
     var t11 = document.getElementById("intimehr");
     var t12 = document.getElementById("intimemin");
@@ -51,7 +56,9 @@
 // console.log(time11,time12)
 //get current time
 dt1= new Date()
-
+currentTime = "Current Time : "+dt1.getHours()+":"+dt1.getMinutes()+":"+dt1.getSeconds()
+var ele3=document.getElementById('ctime')
+ele3.innerHTML=currentTime
 //get last-in time
 dt2= new Date()
 
@@ -76,6 +83,10 @@ var op2="Need to serve more : "+tobeserved+" hours for 8:30hrs"
 // console.log(dt1.getHours())
 if(dt1.getHours()>=0 && dt1.getHours()<7){
     op1="Try between 7 AM to 11 PM"
+    op2=""
+  }
+  if(dt1.getHours()<dt2.getHours()){
+    op1="Current Time should be greater than last-in time"
     op2=""
   }
 var ele=document.getElementById('op1')
