@@ -43,6 +43,9 @@
     var ele3=document.getElementById('ctime')
     ele3.innerHTML=currentTime
   }
+  function refresh(){
+    window.location.reload("Refresh")
+  }
   function ready(){
     var t11 = document.getElementById("intimehr");
     var t12 = document.getElementById("intimemin");
