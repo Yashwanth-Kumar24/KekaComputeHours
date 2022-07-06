@@ -69,6 +69,10 @@
     window.location.reload("Refresh")
   }
 
+  function openKeka(){
+    window.open("https://techigai.keka.com/#/me/attendance/logs", "_blank");
+  }
+
   function ready(){
     var t11 = document.getElementById("intimehr");
     var t12 = document.getElementById("intimemin");
@@ -109,11 +113,8 @@ var op2="Need to serve more : "+tobeserved+" hours for 8:30hrs"
   ctime=dt1.getHours()+":"+dt1.getMinutes();
   outtime=addTimes(ctime,tobeserved)
   var op3="Your out-time is "+outtime+"hrs. (With no BREAKS)"
-  if(dt1.getHours()>=0 && dt1.getHours()<7){
-    op1="Try between 7 AM to 11 PM"
-    op2=""
-    op3=""
-  }
+  console.log(dt1.getHours())
+  
   if(dt1.getHours()<dt2.getHours()){
     op1="Current Time should be greater than last-in time"
     op2=""
@@ -123,6 +124,11 @@ var op2="Need to serve more : "+tobeserved+" hours for 8:30hrs"
     op1="Served so far for : "+served+" hours"
     op2=""
     op3="You can leave!!!"
+  }
+  if(dt1.getHours()>=0 || dt1.getHours()<7){
+    op1="Try between 7 AM to 11 PM"
+    op2=""
+    op3=""
   }
   var ele=document.getElementById('op1')
   ele.innerHTML=op1
