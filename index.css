@@ -139,10 +139,10 @@ body {
   color:orange;
   font-size: larger;
 }
-#ctime{
-  margin-top: 15px;
-  color:red;
-  font-size: larger;
+#time{
+  margin-top: 15px; 
+  color:rgb(6, 33, 238);
+  font-size: x-large;
 }
 
 h1{
