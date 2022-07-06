@@ -108,13 +108,20 @@ var op2="Need to serve more : "+tobeserved+" hours for 8:30hrs"
 if(dt1.getHours()>=0 && dt1.getHours()<7){
     op1="Try between 7 AM to 11 PM"
     op2=""
+    op3=""
   }
   if(dt1.getHours()<dt2.getHours()){
     op1="Current Time should be greater than last-in time"
     op2=""
+    op3=""
   }
-var ele=document.getElementById('op1')
-ele.innerHTML=op1
-var ele2=document.getElementById('op2')
-ele2.innerHTML=op2
+  ctime=dt1.getHours()+":"+dt1.getMinutes();
+    outtime=addTimes(ctime,tobeserved)
+  var op3="Your out-time is "+outtime+"hrs. (With no BREAKS)"
+  var ele=document.getElementById('op1')
+  ele.innerHTML=op1
+  var ele2=document.getElementById('op2')
+  ele2.innerHTML=op2
+  var ele3=document.getElementById('op3')
+  ele3.innerHTML=op3
   }
