@@ -131,7 +131,7 @@ var op2="Need to serve more : "+tobeserved+" hours for 8:30hrs"
     op2=""
     op3="You can leave!!!"
   }
-  if(dt1.getHours()>=0 || dt1.getHours()<7){
+  if(dt1.getHours()>=0 && dt1.getHours()<7){
     op1="Try between 7 AM to 11 PM"
     op2=""
     op3=""
